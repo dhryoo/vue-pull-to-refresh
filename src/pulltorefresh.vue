@@ -75,7 +75,12 @@ export default {
       default: 25
     },
     refreshing: false,
-    indicator: Object,
+    indicator: {
+      type: Object,
+      default () {
+        return {}
+      }
+    },
     className: String,
     onRefresh: Function,
     getScrollContainer: {
@@ -199,14 +204,21 @@ export default {
           }
           this._timer = undefined;
         }, 1000);
-        // this.onRefresh()
-        this.refreshingState = true;
-        setTimeout(() => {
-          this.refreshingState = false;
-        }, 1000);
+        
+        if (typeof this.onRefresh === 'function') {
+          this.onRefresh()
+        } else {
+          this.refreshAction();
+        }        
       } else {
         this.reset();
       }
+    },
+    refreshAction () {
+      this.refreshingState = true;
+      setTimeout(() => {
+        this.refreshingState = false;
+      }, 1000);
     },
     reset () {
       this._lastScreenY = 0;

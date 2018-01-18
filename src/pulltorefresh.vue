@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import classNames from 'classNames';
+import classnames from 'classnames';
 
 const isWebView = typeof navigator !== 'undefined' && /(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/i.test(navigator.userAgent);
 const DOWN = 'down';
@@ -91,13 +91,13 @@ export default {
   },
   computed: {
     containerCls () {
-      return classNames(this.className, this.prefixCls, `${this.prefixCls}-${this.direction}`)
+      return classnames(this.className, this.prefixCls, `${this.prefixCls}-${this.direction}`)
     },
     contentCls () {
       if (this.getScrollContainer()) {
-        return classNames(`${this.prefixCls}-content`, `${this.prefixCls}-${this.direction}`, !this.dragOnEdge && `${this.prefixCls}-transition`)
+        return classnames(`${this.prefixCls}-content`, `${this.prefixCls}-${this.direction}`, !this.dragOnEdge && `${this.prefixCls}-transition`)
       } else {
-        return classNames(`${this.prefixCls}-content`, !this.dragOnEdge && `${this.prefixCls}-transition`)
+        return classnames(`${this.prefixCls}-content`, !this.dragOnEdge && `${this.prefixCls}-transition`)
       }
     }
   },

@@ -1,9 +1,20 @@
 {
-  "name": "vue-pull-to-refresh",
-  "version": "1.0.0",
-  "description": "A Vue.js project",
+  "name": "v-pull-to-refresh",
+  "version": "1.0.1",
+  "description": "Vue PullToRefresh Component.",
+  "keywords": [
+    "vue",
+    "vue-component",
+    "vue-pull-to-refresh",
+    "pull-to-refresh"
+  ],
   "author": "wangxu <ttian226@gmail.com>",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttian226/vue-pull-to-refresh.git"
+  },
+  "license": "MIT",
+  "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",

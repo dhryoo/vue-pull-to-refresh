@@ -46,6 +46,7 @@ try {
 const willPreventDefault = supportsPassive ? { passive: false } : false;
 
 export default {
+  name: 'VPullToRefresh',
   data () {
     return {
       containerRef: null,

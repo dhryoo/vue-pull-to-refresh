@@ -278,16 +278,14 @@ export default {
 .v-pull-to-refresh-indicator {
   color: grey;
   text-align: center;
-  height: 25px;
-  line-height: 25px;
+  height: 28px;
+  line-height: 28px;
 }
 .v-pull-to-refresh-down .v-pull-to-refresh-indicator {
   margin-top: -25px;
-  margin-bottom:25px;
 }
 .v-pull-to-refresh-up .v-pull-to-refresh-indicator {
   margin-bottom: -25px;
-  margin-bottom:25px;
 }
 </style>
 

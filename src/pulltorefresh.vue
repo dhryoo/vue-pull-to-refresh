@@ -4,7 +4,6 @@
       <slot v-if="direction === 'up'"></slot>
       <div :class="`${prefixCls}-indicator`">
         <v-progress-circular indeterminate color="primary" ></v-progress-circular>
-        <br/>
       </div>
      <slot v-if="direction === 'down'"></slot>
     </div>
@@ -15,7 +14,6 @@
         <slot v-if="direction === 'up'"></slot>
         <div :class="`${prefixCls}-indicator`">
             <v-progress-circular indeterminate color="primary" ></v-progress-circular>
-            <br/>
         </div>
         <slot v-if="direction === 'down'"></slot>
       </div>
@@ -285,9 +283,11 @@ export default {
 }
 .v-pull-to-refresh-down .v-pull-to-refresh-indicator {
   margin-top: -25px;
+  margin-bottom:25px;
 }
 .v-pull-to-refresh-up .v-pull-to-refresh-indicator {
   margin-bottom: -25px;
+  margin-bottom:25px;
 }
 </style>
 

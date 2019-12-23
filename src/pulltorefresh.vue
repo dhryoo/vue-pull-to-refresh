@@ -3,7 +3,7 @@
     <div ref="content" :class="contentCls">
       <slot v-if="direction === 'up'"></slot>
       <div :class="`${prefixCls}-indicator`">
-        <v-progress-circular indeterminate color="primary" ></v-progress-circular>
+        <v-progress-circular indeterminate  :size="20" color="primary" ></v-progress-circular>
       </div>
      <slot v-if="direction === 'down'"></slot>
     </div>
@@ -13,7 +13,7 @@
       <div ref="content" :class="contentCls">
         <slot v-if="direction === 'up'"></slot>
         <div :class="`${prefixCls}-indicator`">
-            <v-progress-circular indeterminate color="primary" ></v-progress-circular>
+            <v-progress-circular indeterminate :size="20" color="primary" ></v-progress-circular>
         </div>
         <slot v-if="direction === 'down'"></slot>
       </div>
@@ -278,8 +278,8 @@ export default {
 .v-pull-to-refresh-indicator {
   color: grey;
   text-align: center;
-  height: 28px;
-  line-height: 28px;
+  height: 25px;
+  line-height: 25px;
 }
 .v-pull-to-refresh-down .v-pull-to-refresh-indicator {
   margin-top: -25px;

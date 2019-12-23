@@ -2,15 +2,22 @@
   <div v-if="getScrollContainer()" :class="`${prefixCls}-content-wrapper`">
     <div ref="content" :class="contentCls">
       <slot v-if="direction === 'up'"></slot>
-      <div :class="`${prefixCls}-indicator`">{{ indicator[currSt] || INDICATOR[currSt] }}</div>
-      <slot v-if="direction === 'down'"></slot>
+      <!--div :class="`${prefixCls}-indicator`">{{ indicator[currSt] || INDICATOR[currSt] }}</div-->
+      <div class="text-center">
+        <v-progress-circular indeterminate color="primary" ></v-progress-circular>
+      </div>
+     <slot v-if="direction === 'down'"></slot>
     </div>
   </div>
   <div v-else ref="container" :class="containerCls">
     <div :class="`${prefixCls}-content-wrapper`">
       <div ref="content" :class="contentCls">
         <slot v-if="direction === 'up'"></slot>
-        <div :class="`${prefixCls}-indicator`">{{ indicator[currSt] || INDICATOR[currSt] }}</div>
+
+      <div class="text-center">
+        <v-progress-circular indeterminate color="primary" ></v-progress-circular>
+      </div>
+        <!--div :class="`${prefixCls}-indicator`">{{ indicator[currSt] || INDICATOR[currSt] }}</div-->
         <slot v-if="direction === 'down'"></slot>
       </div>
     </div>
